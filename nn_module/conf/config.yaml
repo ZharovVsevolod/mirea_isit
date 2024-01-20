@@ -1,0 +1,25 @@
+dataset_path:
+  train_name: http://azuremlsamples.azureml.net/templatedata/PM_train.txt
+  test_name: http://azuremlsamples.azureml.net/templatedata/PM_test.txt
+  truth_name: http://azuremlsamples.azureml.net/templatedata/PM_truth.txt
+  raw_train_dest: ./data/azure/raw_train.txt
+  raw_test_dest: ./data/azure/raw_test.txt
+  raw_truth_dest: ./data/azure/raw_truth.txt
+  train_dest: ./data/azure/train.csv
+  test_dest: ./data/azure/test.csv
+
+dataset:
+  time_lenght: 50
+  id_var: 5
+
+model:
+  name: gru
+  input_size: 25
+  hidden_size: 100
+  num_layers: 2
+  drop: 0.2
+
+training:
+  epochs: 20
+  batch_size: 128
+  lr: 3e-3
